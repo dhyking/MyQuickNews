@@ -6,4 +6,5 @@
 
 
     <color name="text_letter_center_show">#ffffff</color>
+    <color name="dark_white">#c3ffffff</color>
 </resources>

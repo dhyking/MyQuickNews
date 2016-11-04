@@ -1,45 +1,63 @@
 package com.example.myquicknews;
 
+import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.myquicknews.adapter.TabFragmentAdapter;
+import com.example.myquicknews.fragment.HeadlineFragment;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    @BindView(R.id.tab_layout)
+    TabLayout mTabLayout;
+    @BindView(R.id.viewpager)
+    ViewPager mViewpager;
+    @BindView(R.id.nav_view)
+    NavigationView mNavView;
+    @BindView(R.id.toolbar)
+    Toolbar mToolbar;
+    private String[] titles = new String[]{"头条","推荐","体育","图片","视频"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        ButterKnife.bind(this);
+        setSupportActionBar(mToolbar);
+        mNavView.setNavigationItemSelectedListener(this);
+        initViewpager();
+        mTabLayout.setupWithViewPager(mViewpager);
+        mTabLayout.setTabTextColors(getResources().getColor(R.color.dark_white), Color.WHITE);
+    }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+    private void initViewpager() {
+        List<Fragment> fragments = new ArrayList<>();
+        for (int i = 0; i < titles.length; i++) {
+            Fragment fragment = new HeadlineFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString("text",titles[i]);
+            fragment.setArguments(bundle);
+            fragments.add(fragment);
+        }
+        TabFragmentAdapter mTabFragmentAdapter = new TabFragmentAdapter(getSupportFragmentManager(),this,fragments,titles);
+        mViewpager.setAdapter(mTabFragmentAdapter);
     }
 
     @Override
