@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_city_select"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myquicknews.activity.CitySelectActivity">
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        </android.support.v7.widget.RecyclerView>
+    </android.support.design.widget.CoordinatorLayout>
+    <include layout="@layout/rv_letter_header"/>
+    <com.example.myquicknews.view.LetterCityView
+        android:id="@+id/letter_view"
+        android:layout_width="@dimen/dimen30"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        />
+    <TextView
+        android:id="@+id/tv_letter_show"
+        android:layout_width="@dimen/tv_letter_center_show"
+        android:layout_height="@dimen/tv_letter_center_show"
+        android:background="@drawable/letter_circle_bg"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/letter_center_show"
+        android:textColor="@color/text_letter_center_show"
+        android:text="A"
+        android:visibility="gone"
+        />
+</FrameLayout>

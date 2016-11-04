@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_pic"
+            android:icon="@drawable/biz_navigation_tab_pics"
+            android:title="@string/main_left_pic"/>
+        <item
+            android:id="@+id/nav_video"
+            android:icon="@drawable/biz_navigation_tab_video"
+            android:title="@string/main_left_video"/>
+        <item
+            android:id="@+id/nav_weather"
+            android:icon="@drawable/biz_navigation_tab_read"
+            android:title="@string/main_left_weather"/>
+        <item
+            android:id="@+id/nav_more"
+            android:icon="@drawable/biz_navigation_tab_ties"
+            android:title="@string/main_left_more"/>
+    </group>
+</menu>
