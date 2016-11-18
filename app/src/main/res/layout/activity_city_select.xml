@@ -13,15 +13,17 @@
             android:id="@+id/recycle_city"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            >
-        </android.support.v7.widget.RecyclerView>
+       />
     </android.support.design.widget.CoordinatorLayout>
     <include layout="@layout/rv_letter_header"/>
+
     <com.example.myquicknews.view.LetterCityView
         android:id="@+id/letter_view"
         android:layout_width="@dimen/dimen30"
         android:layout_height="match_parent"
-        android:layout_gravity="end"
+        android:layout_gravity="right|center"
+        android:layout_marginTop="@dimen/dimen20"
+        android:layout_marginBottom="@dimen/dimen10"
         />
     <TextView
         android:id="@+id/tv_letter_show"
@@ -32,6 +34,7 @@
         android:gravity="center"
         android:textSize="@dimen/letter_center_show"
         android:textColor="@color/text_letter_center_show"
+        android:alpha="0.5"
         android:text="A"
         android:visibility="gone"
         />

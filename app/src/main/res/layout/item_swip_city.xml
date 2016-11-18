@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="50dp">
+    <TextView
+        android:id="@+id/top_set"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:background="@color/dark_gray"
+        android:text="置顶"
+        />
+    <TextView
+        android:id="@+id/mark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:background="@color/colorAccent"
+        android:text="标记"
+        />
+    <TextView
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:background="@color/colorPrimary"
+        android:text="删除"
+        />
+</LinearLayout>

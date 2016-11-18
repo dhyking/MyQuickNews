@@ -2,23 +2,40 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.myquicknews.MainActivity"
-    tools:showIn="@layout/app_bar_main">
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tab_layout"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        app:tabIndicatorColor="@color/colorPrimary"
-        android:background="@color/colorAccent"
-        app:tabMode="scrollable"
+    android:orientation="vertical"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
         >
-    </android.support.design.widget.TabLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabMode="scrollable"
+            app:tabBackground="@drawable/radio_buttong_bg"
+            >
+        </android.support.design.widget.TabLayout>
+        <ImageView
+            android:id="@+id/press_channel"
+            android:layout_height="match_parent"
+            android:layout_width="40dp"
+            android:layout_weight="0"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/selector_channel_bg"
+            />
+
+    </LinearLayout>
+
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"

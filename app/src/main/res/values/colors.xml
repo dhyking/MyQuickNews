@@ -3,8 +3,31 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="main_red">#ffcc3131</color>
 
 
     <color name="text_letter_center_show">#ffffff</color>
     <color name="dark_white">#c3ffffff</color>
+    <color name="dark_gray">#c2b9b9</color>
+    <color name="dark_checked">#40E0D0</color>
+    <color name="dark_letter_checked">#00c2ee</color>
+    <color name="category_item_text">#3b3d3c</color>
+    <color name="subscribe_item_drag_bg">#fff5f5f5</color>
+    <color name="subscribe_item_drag_stroke">#ffd2d2d2</color>
+    <color name="subscribe_item_normal_stroke">#ffcdcdcd</color>
+    <color name="subscribe_item_normal_bg">#fff5f5f5</color>
+
+
+
+    <color name="default_text">#ff454545</color>
+    <color name="subscribe_item_text_color_pressed">#ffb9b9b9</color>
+    <color name="category_subscribe_text">#ffffffff</color>
+    <color name="drawer_item_bg">#ff5d5d5d</color>
+    <color name="drawer_line_color">#ff444444</color>
+    <color name="title_text_color">#ffffffff</color>
+    <color name="subscribe_tip_text">#ff2e2e2e</color>
+    <color name="subscribe_activity_bg">#ffefefef</color>
+    <color name="subscribe_bg">#fff5f5f5</color>
+    <color name="subscribe_seperate_line">#ffcdcdcd</color>
+
 </resources>

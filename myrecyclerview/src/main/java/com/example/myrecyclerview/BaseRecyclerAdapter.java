@@ -229,6 +229,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
             default:
             case VIEW_TYPE_CONTENT:
                 convert((BaseViewHolder) holder, mData.get(holder.getLayoutPosition() - getHeaderViewCount()));
+                holder.itemView.setTag(mData.get(position));
                 // addAnimation(holder, holder.getLayoutPosition());
                 break;
             case VIEW_TYPE_LOADING:
@@ -299,7 +300,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
             baseViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    onRecyclerItemClickListener.onItemClick(v, baseViewHolder.getLayoutPosition() - getHeaderViewCount());
+                    onRecyclerItemClickListener.onItemClick(v, v.getTag(), baseViewHolder.getLayoutPosition() - getHeaderViewCount());
                 }
             });
         }
@@ -307,7 +308,7 @@ public abstract class BaseRecyclerAdapter<T> extends RecyclerView.Adapter<Recycl
             baseViewHolder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    return onRecyclerItemLongClickListener.onItemLongClick(v, baseViewHolder.getLayoutPosition() - getHeaderViewCount());
+                    return onRecyclerItemLongClickListener.onItemLongClick(v, v.getTag(),baseViewHolder.getLayoutPosition() - getHeaderViewCount());
                 }
             });
         }

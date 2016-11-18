@@ -11,8 +11,9 @@
 
     <dimen name="dimen5">5dp</dimen>
     <dimen name="tv_letter_center_show">50dp</dimen>
-    <dimen name="letter_header_height">30dp</dimen>
-    <dimen name="letter_header_height_left">5dp</dimen>
+    <dimen name="letter_header_height">40dp</dimen>
+    <dimen name="letter_header_height_left">10dp</dimen>
+    <dimen name="letter_item_margin">10dp</dimen>
     <dimen name="dimen10">10dp</dimen>
     <dimen name="dimen15">15dp</dimen>
     <dimen name="dimen20">20dp</dimen>

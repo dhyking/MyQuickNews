@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_head_show"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/letter_header_height"
+        android:background="@color/colorAccent"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/letter_header_height_left"
+        android:text="A"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/letter_head"
+
+        />
+
+    <com.daimajia.swipe.SwipeLayout xmlns:swipe="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/swipe"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    swipe:leftEdgeSwipeOffset="0dp"
+                                    swipe:rightEdgeSwipeOffset="0dp">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/top_set"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FF5534"
+                android:gravity="center"
+                android:text="置顶"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/mark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:gravity="center"
+                android:text="标记"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="删除"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark_white"
+            android:elevation="5dp"
+            android:padding="10dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/letter_item_margin"
+                android:text="北京"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+    </com.daimajia.swipe.SwipeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5px"
+        android:background="@color/dark_gray"
+        />
+</LinearLayout>
